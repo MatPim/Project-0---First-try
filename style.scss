@@ -2,6 +2,7 @@ $marginOut: 0px 0px 0px;
 $mainFont: Arial, Helvetica, sans-serif;
 $mainSiteColor: cadetblue;
 $secondSiteColor: white;
+$tableBorderCaracteristics: 5px solid $mainSiteColor;
 %linkMainDesign{
     text-decoration: none;
     
@@ -39,38 +40,39 @@ $secondSiteColor: white;
         
     }
     table{
-        
-        border: 2px solid $secondSiteColor;
+        border-top: $tableBorderCaracteristics;
+        border-right: $tableBorderCaracteristics;
+        border-left: $tableBorderCaracteristics;
+        border-bottom: $tableBorderCaracteristics;
         width: 100%;
         border-collapse: separate;
        
       
 
     }
-    #box1{
-        background-color: $mainSiteColor;
-    }
+    
     .notChosed{
         background-color: $secondSiteColor;
         color: $mainSiteColor;
     }
     .chosed{
         color: $secondSiteColor;
+        background-color: $mainSiteColor;
     }
 
     th{
         border: 1px solid $mainSiteColor;
         margin: $marginOut;
-        padding: 5px;
+        padding: 7px;
         text-align: center;
         size: 20px;
     }
     th:hover{
         @extend %linkMainDesign;
-        background-color: $mainSiteColor;
+        background-color: gray;
         a{
             @extend %linkMainDesign;
-            background-color: $mainSiteColor;
+            background-color: gray;
             color: $secondSiteColor;
         }
             
