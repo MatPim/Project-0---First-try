@@ -2,10 +2,20 @@ $marginOut: 0px 0px 0px;
 $mainFont: Arial, Helvetica, sans-serif;
 $mainSiteColor: cadetblue;
 $secondSiteColor: white;
+$thirdSiteColor: gray;
 $tableBorderCaracteristics: 5px solid $mainSiteColor;
+%animation{
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
 %linkMainDesign{
     text-decoration: none;
-    
+}
+%titleDecoration{
+    text-align: center;
+    padding-top: 1px;
 }
 
 
@@ -16,9 +26,8 @@ $tableBorderCaracteristics: 5px solid $mainSiteColor;
 }
 #titleHeader{
     h1{
-        text-align: center;
+        @extend %titleDecoration;
         font-family: $mainFont;
-        padding-top: 1px;
         color: $secondSiteColor;
     }
 
@@ -61,7 +70,7 @@ $tableBorderCaracteristics: 5px solid $mainSiteColor;
     }
 
     th{
-        border: 1px solid $mainSiteColor;
+        border: 1.5px solid $mainSiteColor;
         margin: $marginOut;
         padding: 7px;
         text-align: center;
@@ -69,11 +78,15 @@ $tableBorderCaracteristics: 5px solid $mainSiteColor;
     }
     th:hover{
         @extend %linkMainDesign;
-        background-color: gray;
+        @extend %animation;
+        background-color: $mainSiteColor;
+
         a{
             @extend %linkMainDesign;
-            background-color: gray;
+            @extend %animation;
+            background-color: $mainSiteColor;
             color: $secondSiteColor;
+            
         }
             
 
@@ -87,4 +100,52 @@ $tableBorderCaracteristics: 5px solid $mainSiteColor;
 
 body, h1{
     margin: $marginOut;
+}
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, label::selection, a::selection{
+    background-color: $thirdSiteColor;
+    color: $secondSiteColor;
+}
+
+section{
+    h2{
+        @extend %titleDecoration;
+        font-family: $mainFont;
+        color: $mainSiteColor;
+        margin-top: 2%;
+    }
+   
+    #text1{
+        
+        width: 100%;
+     
+    }
+       
+    label{
+        font-family: $mainFont;
+        width: 40%; 
+        margin-left: 15%;
+        
+        padding-left: 20%;
+     }
+    #text2{
+        margin-top: 3%;
+         width: 100%;
+         background-color: $mainSiteColor;
+         label{
+            margin-top: 5%;
+            padding-left: 0px;
+            margin-left: 2.3%;
+            color: white;
+            width: 23%;
+
+        }
+        img{
+            padding-top: 2%;
+            padding-bottom: 2%;
+            height: 12.5%;
+            width: 12.5%;
+            margin-left: 30%;
+        }
+    }
+ 
 }
