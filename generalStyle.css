@@ -1,4 +1,4 @@
-#pagesMenu a {
+#pagesMenu th:hover a, #pagesMenu th:hover, #pagesMenu a, #pagesMenu a:hover {
   text-decoration: none;
 }
 
@@ -10,19 +10,49 @@
 #titleHeader h1 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 5px;
+  padding-top: 1px;
   color: white;
 }
 
+#pagesMenu .parallelogram {
+  width: 60%;
+  height: 10%;
+  transform: skew(20deg);
+  background: transparent;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#pagesMenu a, #pagesMenu a:hover {
+  text-transform: capitalize;
+}
 #pagesMenu table {
   border: 2px solid white;
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: separate;
+}
+#pagesMenu #box1 {
+  background-color: cadetblue;
+}
+#pagesMenu .notChosed {
+  background-color: white;
+  color: cadetblue;
+}
+#pagesMenu .chosed {
+  color: white;
 }
 #pagesMenu th {
-  border: 1px solid black;
+  border: 1px solid cadetblue;
+  margin: 0px 0px 0px;
   padding: 5px;
   text-align: center;
+  size: 20px;
+}
+#pagesMenu th:hover {
+  background-color: cadetblue;
+}
+#pagesMenu th:hover a {
+  background-color: cadetblue;
+  color: white;
 }
 
 body, h1 {

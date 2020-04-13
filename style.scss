@@ -1,40 +1,88 @@
 $marginOut: 0px 0px 0px;
 $mainFont: Arial, Helvetica, sans-serif;
+$mainSiteColor: cadetblue;
+$secondSiteColor: white;
 %linkMainDesign{
     text-decoration: none;
-
+    
 }
+
 
 #titleHeader{
     height: 50px;
-    background-color: cadetblue;
+    background-color: $mainSiteColor;
     
 }
 #titleHeader{
     h1{
         text-align: center;
         font-family: $mainFont;
-        padding-top: 5px;
-        color: white;
+        padding-top: 1px;
+        color: $secondSiteColor;
     }
 
 }
 #pagesMenu{
-    a{
-        @extend %linkMainDesign
+    .parallelogram {
+       
+        width: 60%;
+        height: 10%;
+        transform: skew(20deg);
+        background: transparent;
+      
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    a, a:hover{
+        @extend %linkMainDesign;
+        text-transform: capitalize;
+        
     }
     table{
-        border: 2px solid white;
-        border-collapse: collapse;
+        
+        border: 2px solid $secondSiteColor;
         width: 100%;
+        border-collapse: separate;
+       
+      
+
     }
+    #box1{
+        background-color: $mainSiteColor;
+    }
+    .notChosed{
+        background-color: $secondSiteColor;
+        color: $mainSiteColor;
+    }
+    .chosed{
+        color: $secondSiteColor;
+    }
+
     th{
-        border: 1px solid black;
+        border: 1px solid $mainSiteColor;
+        margin: $marginOut;
         padding: 5px;
         text-align: center;
+        size: 20px;
     }
+    th:hover{
+        @extend %linkMainDesign;
+        background-color: $mainSiteColor;
+        a{
+            @extend %linkMainDesign;
+            background-color: $mainSiteColor;
+            color: $secondSiteColor;
+        }
+            
+
+            
+            
+        }
+    }
+        
     
-}
+    
+
 body, h1{
     margin: $marginOut;
 }
