@@ -1,0 +1,40 @@
+$marginOut: 0px 0px 0px;
+$mainFont: Arial, Helvetica, sans-serif;
+%linkMainDesign{
+    text-decoration: none;
+
+}
+
+#titleHeader{
+    height: 50px;
+    background-color: cadetblue;
+    
+}
+#titleHeader{
+    h1{
+        text-align: center;
+        font-family: $mainFont;
+        padding-top: 5px;
+        color: white;
+    }
+
+}
+#pagesMenu{
+    a{
+        @extend %linkMainDesign
+    }
+    table{
+        border: 2px solid white;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th{
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+    }
+    
+}
+body, h1{
+    margin: $marginOut;
+}

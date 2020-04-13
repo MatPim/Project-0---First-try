@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="generalStyle.css">
+    <style>
+        #box1{
+            background-color: cadetblue;
+        }
+        .notChosed{
+            background-color: white;
+            color: cadetblue;
+        }
+        .chosed{
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -11,10 +25,15 @@
             <h1>My life</h1>
         </div>
         <div id="pagesMenu">
-            <a href="main_page.html"></a>
-            <a href="coddingPage.html"></a>
-            <a href="violinPage.html"></a>
-            <a href="moreAboutMe.html"></a>
+            <table>
+                <tr>
+                    <th id="box1"><a class="chosed" id="HomePage" href="main_page.html">Home</a></th>
+                    <th id="box2"><a class="notChosed" id="CodePage" href="coddingPage.html">My coder life</a></th>
+                    <th id="box3"><a class="notChosed" id="ViolinPage" href="violinPage.html">Violinist</a></th>
+                    <th id="box4"><a class="notChosed" id="MoreInfoPage" href="moreAboutMe.html">More about me</a></th>
+                </tr>
+            </table>
+            
         </div>
     </header>
 </body>
