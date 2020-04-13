@@ -113,39 +113,5 @@ section{
         color: $mainSiteColor;
         margin-top: 2%;
     }
-   
-    #text1{
-        
-        width: 100%;
-     
-    }
-       
-    label{
-        font-family: $mainFont;
-        width: 40%; 
-        margin-left: 15%;
-        
-        padding-left: 20%;
-     }
-    #text2{
-        margin-top: 3%;
-         width: 100%;
-         background-color: $mainSiteColor;
-         label{
-            margin-top: 5%;
-            padding-left: 0px;
-            margin-left: 2.3%;
-            color: white;
-            width: 23%;
-
-        }
-        img{
-            padding-top: 2%;
-            padding-bottom: 2%;
-            height: 12.5%;
-            width: 12.5%;
-            margin-left: 30%;
-        }
-    }
  
 }
